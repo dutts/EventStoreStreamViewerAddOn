@@ -1,9 +1,9 @@
 var jsonView = document.querySelector("pre.ng-binding");
-var data = jsonView.innerHTML; // eval('('+jsonView.textContent+')');
+var  data  = eval('(' + jsonView.innerText + ')');
 
-var newViewer = document.createElement("textarea");
+var newViewer = document.createElement("pre");
 newViewer.className = "json-renderer"
 
-jsonView.appendChild(newViewer);
+jsonView.replaceWith(newViewer);
 
-$('textarea.json-renderer').jsonViewer(data);
+$('pre.json-renderer').jsonViewer(data, { withQuotes: true });
