@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Event Store Stream View Helper",
+  "version": "0.23",
+  "description": "Flaps all Foos",
+  "author": "Richard Dutton",
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": ["jquery.json-viewer.css"],
+      "js": ["jquery-2.1.4.min.js", "jquery.json-viewer.js", "api.js"],
+      "run_at": "document_end"
+     }
+  ]
+}
